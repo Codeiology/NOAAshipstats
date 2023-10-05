@@ -1,5 +1,3 @@
-print('LETS HACK THE NOAA AND PWN ALL THEIR SHIPS!')
-
 import pandas as pd
 import requests as req
 from bs4 import BeautifulSoup
