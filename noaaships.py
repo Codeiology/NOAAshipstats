@@ -1,3 +1,5 @@
+print("Aight lets grab some CSV from the NOAA!")
+
 import pandas as pd
 import requests as req
 from bs4 import BeautifulSoup
@@ -28,10 +30,10 @@ FULL RECOVERED DATA SAVED TO shiplocs.csv''')
             else:
                 print(f'ERR: STATUS CODE {response.status_code}')
         else:
-            print('nvm I hacked it but I could find anything')
+            print('nvm could find anything')
     except req.exceptions.RequestException as e:
         print(f"Error: {e}")
 elif response.status_code == 404:
-    print('Oh dang I was trying to hack something i though existed but it doesnt anymore lol.')
+    print('The CSV file we were looking for doesnt exist anymore for some reason. Sorry lol.')
 else:
-    print(f'Uhh... I was trying to hack them but I got a status code {response.status_code}')
+    print(f'Uhh... I was trying to get the CSV but I got status code {response.status_code}')
